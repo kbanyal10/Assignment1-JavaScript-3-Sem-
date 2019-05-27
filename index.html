@@ -1,23 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Assignment 1 | COMP1073 Client-Side JavaScript</title>
-	<link rel="stylesheet" href="css/normalize.css" />
-	<link rel="stylesheet" href="css/main.css" />
+	<!-- Style Sheets -->
+	<link rel="stylesheet" href="normalize.css" />
+	<link rel="stylesheet" href="main.css" />
 </head>
 
-<body>
-		<button id="button">Surprize</button>
-	<button id="button1">Button 1</button>
-	<button id="button2">Button 2</button>
-	<button id="button3">Button 3</button>
-	<button id="button4">Button 4</button>
-	<button id="button5">Button 5</button>
-	<button id="reset">Reset</button>
-	<button id="button6">Say</button>
+<body class="responsive">
+	<!-- Bootstrap classes to make division impresive -->
+	<div class="container jumbotron text-center">
+		<h1>See N Story Maker</h1>
+		<img src="Capture.PNG" width="950" height="700" alt="Planets" usemap="#planetmap">
+	<!-- This will map the image, so that functioning can be applied -->
+<map name="planetmap">
 
-	<script src="js/app.js" async></script>
+	<area shape="circle" coords="561,112,24" id="nouns" alt="Image will come soon">
+	<area shape="circle" coords="630,112,24" id="verbs" alt="Image will come soon">
+	<area alt="Image will come soon" coords="700,109,23" shape="circle" id="adjective">
+	<area alt="Image will come soon" coords="765,110,23" shape="circle" id="anotherNoun">
+	<area alt="Image will come soon" coords="834,106,25" shape="circle" id="place">
+	<area alt="Image will come soon" coords="785,540,28" shape="circle" id="reset">
+	<area alt="Image will come soon" coords="868,554,27" shape="circle" id="surprizeButton"> 
+  </map>
+	<script src="app.js" ></script>
+	
+<div>
+	
+<!--These are the instructions for the game to play-->
+<h2> Instructions to use the game </h2>
+
+<ol>
+	<li>Click buttons to see different actions.</li>
+	<li>The purple button selects any button from list of first column.</li>
+	<li>The sky blue button selects any button from list of second column.</li>
+	<li>The green button selects any button from list of third column.</li>
+	<li>The orange button selects any button from list of fourth column.</li>
+	<li>The pink button selects any button from list of five column.</li>
+	<li>The red button selects the reset function and resets the String.</li>
+	<li>The sky blue button, adjacent to red button which will surprizingly say a sentence.</li>
+	<li>To view whats going on background please see the console.</li>
+</ol>
+
+</div>
+</div>
 </body>
 </html>
