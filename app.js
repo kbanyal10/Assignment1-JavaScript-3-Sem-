@@ -20,8 +20,11 @@ resetButton.addEventListener('click', resetting);
 
 var speakButton = document.querySelector('#surprizeButton');
 
+var playBack = document.querySelector('#playback');
+playBack.addEventListener('click', playing);
 
-
+var paragraph = document.querySelector('#para');
+var playone = ""; var playtwo = ""; var playthree = ""; var playfour = ""; var playfive = ""; var playsix = ""; var played = "";
 
 
 //These are the arrays from which each button selects a word randomly
@@ -46,12 +49,23 @@ var textToSpeak5 = array5[Math.floor(Math.random() * array5.length)];
 
 //These functions will respond on clicking every button of game accordingly
 
+function playing(){
+	var paragraph = document.querySelector('#para');
+	let text = paragraph.textContent;
+	speakNow(text);
+	console.log(text);
+}
+
 //This is for the Nouns
 function select1(){
 
 	textToSpeak1 = array1[Math.floor(Math.random() * array1.length)];
 	speakNow(textToSpeak1);
 	console.log(textToSpeak1);
+	var paragraph = document.querySelector('#para');
+	paragraph.textContent += textToSpeak1+" ";
+	playone += textToSpeak1+" ";
+	
 	
 }	
 //This is for Verbs
@@ -59,18 +73,27 @@ function select2(){
 	textToSpeak2 = array2[Math.floor(Math.random() * array2.length)];
 	speakNow(textToSpeak2);
 console.log(textToSpeak2);
+var paragraph = document.querySelector('#para');
+	paragraph.textContent += textToSpeak2+" ";
+playtwo += textToSpeak2+" ";
 }
 //This is for adjective 
 function select3(){
 	textToSpeak3 = array3[Math.floor(Math.random() * array3.length)];
 	speakNow(textToSpeak3);
 console.log(textToSpeak3);
+var paragraph = document.querySelector('#para');
+	paragraph.textContent += textToSpeak3+" ";
+playthree += textToSpeak3+" ";
 }
 //This is for another noun
 function select4(){
 	textToSpeak4 = array4[Math.floor(Math.random() * array4.length)];
 	speakNow(textToSpeak4);
 console.log(textToSpeak4);
+var paragraph = document.querySelector('#para');
+	paragraph.textContent += textToSpeak4+" ";
+playfour += textToSpeak4+" ";
 }
 
 // This is for number of places or settings
@@ -79,15 +102,23 @@ function select5(){
 	textToSpeak5 = array5[Math.floor(Math.random() * array5.length)];
 	speakNow(textToSpeak5);
 console.log(textToSpeak5);
+var paragraph = document.querySelector('#para');
+	paragraph.textContent += textToSpeak5+" ";
+playfive += textToSpeak5+" ";
 }
 //This will define the textToSpeak for the first time
 textToSpeakFinal = textToSpeak1+" "+textToSpeak2+" "+textToSpeak3+" "+textToSpeak4+" "+textToSpeak5;
 
 //This is responsible for resetting the String
 function resetting(){
+
 	//textToSpeakFinal = array1[Math.floor(Math.random() * array1.length)]+" "+ array2[Math.floor(Math.random() * array2.length)]+" "+ array3[Math.floor(Math.random() * array3.length)]+" "+ array4[Math.floor(Math.random() * array4.length)]+" "+ array5[Math.floor(Math.random() * array5.length)];
+	var paragraph = document.querySelector('#para');
+	paragraph.textContent = "";
+
 	textToSpeakFinal = "";
 	console.log(textToSpeakFinal);
+	speakNow("reset");
 	
 }
 
@@ -105,5 +136,8 @@ speakButton.onclick = function() {
 
 	speakNow(textToSpeakFinal);
 	console.log(textToSpeakFinal);
+	var paragraph = document.querySelector('#para');
+	paragraph.textContent += textToSpeakFinal+" ";
+	playsix += textToSpeakFinal+" ";
 }
 
